@@ -2,6 +2,11 @@ import numpy as np
 
 
 def rgb_to_hsv(rgb: np.ndarray):
+    """
+    Convert (512,512,3) ndarray ([R,G,B]-order) to HSV
+    :param rgb: (512,512,3) ndarray ([R,G,B]-order)
+    :return: (512,512,3) ndarray for [H,S,V]-order value
+    """
     input_shape = rgb.shape
     normalized: np.ndarray = (rgb / (np.ones(rgb.shape) * 255)).reshape(-1, 3)
     nr, ng, nb = normalized[:, 0], normalized[:, 1], normalized[:, 2]
@@ -28,6 +33,11 @@ def rgb_to_hsv(rgb: np.ndarray):
 
 
 def hsv_to_rgb(hsv):
+    """
+    Convert (512,512,3) ndarray ([H,S,V]-order) to RGB
+    :param hsv: (512,512,3) ndarray ([H,S,V]-order)
+    :return: (512,512,3) ndarray for [R,G,B]-order value
+    """
     input_shape = hsv.shape
     hsv = hsv.reshape(-1, 3)
     h, s, v = hsv[:, 0], hsv[:, 1], hsv[:, 2]
@@ -49,4 +59,9 @@ def hsv_to_rgb(hsv):
     rgb[i == 5] = np.hstack([v, p, q])[i == 5]
     rgb[s == 0.0] = np.hstack([v, v, v])[s == 0.0]
 
-    return rgb.reshape(input_shape)
+    rgb[rgb > 1] = 1.0
+    rgb[rgb < 0] = 0.0
+
+    rgb = rgb * 255.0
+
+    return rgb.astype(int).reshape(input_shape)

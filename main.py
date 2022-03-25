@@ -10,11 +10,9 @@ plt.imshow(img)
 plt.show()
 
 hsv = rgb_to_hsv(img)
-shape = hsv.shape
-hsv.reshape(-1, 3)
-h, s, v = hsv[:, 0], hsv[:, 1], hsv[:, 2]
-s = s * 2.0
-hsv = np.dstack([h, s, v]).reshape(shape)
+hsv[:, :, 1] = hsv[:, :, 1] * 1.5
 
 rgb = hsv_to_rgb(hsv)
+
 plt.imshow(rgb)
+plt.show()
