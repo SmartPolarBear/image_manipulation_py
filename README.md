@@ -4,7 +4,8 @@ A project to implement something about image manipulation in python.
 
 ## Why
 
-I come up with this idea completely on a whim. I think I need some project to do some math, so I do this. I mainly craft these stuff from scratch.
+I come up with this idea completely on a whim. I think I need some project to do some math, so I do this. I mainly craft
+these stuff from scratch.
 
 ## Prerequisite
 
@@ -19,4 +20,4 @@ I come up with this idea completely on a whim. I think I need some project to do
 | Status | Feature                | Description                             |
 |--------|------------------------|-----------------------------------------|
 | ✅      | HSV <-> RGB Conversion | Convert between HSV and RGB color space |
-
+| ✅      | HSV Transformation     | Manipulate HSV for RGB image            |
