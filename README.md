@@ -8,13 +8,15 @@ I come up with this idea completely on a whim. I think I need some project to do
 
 ## Prerequisite
 
+#### Third-party Libraries
+
 - Numpy
 - Matplotlib
 - PIL
 
 ## Features
 
-| Status | Feature               | Description                             |
-|--------|-----------------------|-----------------------------------------|
-| ✅      | HSV<->RGB Converstion | Convert between HSV and RGB color space |
+| Status | Feature                | Description                             |
+|--------|------------------------|-----------------------------------------|
+| ✅      | HSV <-> RGB Conversion | Convert between HSV and RGB color space |
 
