@@ -17,7 +17,8 @@ these stuff from scratch.
 
 ## Features
 
-| Status | Feature                | Description                             |
-|--------|------------------------|-----------------------------------------|
-| ✅      | HSV <-> RGB Conversion | Convert between HSV and RGB color space |
-| ✅      | HSV Transformation     | Manipulate HSV for RGB image            |
+| Status | Feature                 | Description                             |
+|--------|-------------------------|-----------------------------------------|
+| ✅      | HSV <-> RGB Conversion  | Convert between HSV and RGB color space |
+| ✅      | HSV Transformation      | Manipulate HSV for RGB image            |
+| ✅      | Brightness and Contrast | Manipulate brightness and contrast      |
